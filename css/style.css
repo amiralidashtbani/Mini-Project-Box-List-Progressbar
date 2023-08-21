@@ -3,3 +3,102 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+body {
+    font-family: 'Poppins';
+    font-weight: 600;
+    background-color: #4070f4;
+    height: 100vh;  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    background-color: #fff;
+    max-width: 500px;
+    width: 100%;
+    height: 280px;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.skill-box {
+    margin: 1.5rem 0;
+}
+
+.skill-bar {
+    background-color: rgba(0,0,0,0.1);
+    width: 100%;
+    height: 8px;
+    margin-top: 5px;
+    border-radius: 10px;
+}
+
+.skill-progress {
+    background-color: #4070f4;
+    height: 100%;
+    border-radius: 10px;
+    position: relative;
+    animation: skill-pes-load 2s ease-in-out forwards;
+}
+
+.html {
+    width: 90%;
+}
+
+.css {
+    width: 70%;
+}
+
+.js {
+    width: 50%;
+}
+
+@keyframes skill-pes-load {
+    0% {
+        width: 0%;
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.tooltip {
+    background-color: #4070f4;
+    padding: 2px 5px;
+    border-radius: 3px;
+    font-size: 10px;
+    color: #fff;
+    position: absolute;
+    top: -31px;
+    right: -13px;
+    z-index: 1;
+}
+
+.tooltip::before{
+    content: '';
+    background-color: #4070f4;
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    position: absolute;
+    top: 13px;
+    left: 10px;
+    transform: rotate(45deg);
+    z-index: -1;
+}
+
+@media screen and (max-width:505px) {
+   .container {
+    max-width: 400px;
+   }
+}
+
+@media screen and (max-width:412px) {
+    .container {
+     max-width: 300px;
+    }
+ }
